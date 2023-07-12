@@ -27,12 +27,7 @@ const alumnos = [
     }
   });
   
-  console.log(
-    "La nota mayor es de ",
-    nombreNotaMayor,
-    " con ",
-    notaMayor,
-  );
+  console.log("la nota mayor es", notaMayor, "del alumno", nombreNotaMayor);
 
 
 
