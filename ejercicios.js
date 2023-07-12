@@ -20,10 +20,10 @@ const alumnos = [
   let notaMayor = 0;
   let nombreNotaMayor = "";
   
-  alumnos.forEach((alumno) => {
-    if (alumno.nota > notaMayor) {
-      notaMayor = alumno.nota;
-      nombreNotaMayor = alumno.nombre;
+  alumnos.forEach((e) => {
+    if (e.nota > notaMayor) {
+      notaMayor = e.nota;
+      nombreNotaMayor = e.nombre;
     }
   });
   
@@ -33,3 +33,8 @@ const alumnos = [
     " con ",
     notaMayor,
   );
+
+
+
+
+  
