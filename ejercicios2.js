@@ -39,3 +39,49 @@ function devuelvePromedio(array) {
 
 const promedioArray2 = devuelvePromedio(array2);
 console.log(promedioArray2);
+
+
+// Definir una función que devuelva TRUE si el argumento recibido como texto un palíndromo, osea que se lee de la misma forma de izquierda y derecha. Ejemplo de palíndromo "¿Acaso hubo búhos acá?".
+
+function palindromo(check) {
+  const fraseAlReves = check.split("").reverse().join("");
+
+  return fraseAlReves === check ? "es palindromo" : "no es palindromo";
+}
+console.log(palindromo("acaso hubo buhos aca")); 
+console.log(palindromo("neuquen")); 
+console.log(palindromo("matematicas")); 
+
+// Crear una función para validar los datos que se ingresaron en un formulario. Recibirá como parametros email, password y description.
+// Deberá comprobar que se cumplan las siguientes condiciones:
+// - El email debe contener "@" y ".com".
+// - La contraseña deberá tener entre 8 y 16 caracteres, y tener una mayúscula como mínimo.
+// - La descripción podrá tener hasta 400 caracteres pero no puede contener guiones (-).
+// Mostrar un error en caso de que no se cumplan todos los requisitos, de lo contrario dar un mensaje de registro exitoso (usando console.log)
+// Sugerencia:  function validation(email, password, description)
+
+function validarFormulario(email, password, description) {
+  
+  if (!email.includes("@") || !email.includes(".com")) {
+    console.log("Error: El email no es válido.");
+    return;
+  }
+
+ 
+  if (password.length < 8 || password.length > 16 || !/[A-Z]/.test(password)) {
+    console.log("Error: La contraseña no cumple con los requisitos.");
+    return;
+  }
+
+ 
+  if (description.length > 400 || description.includes("-")) {
+    console.log("Error: La descripción no cumple con los requisitos.");
+    return;
+  }
+
+
+  console.log("Registro exitoso. ¡Bienvenido!");
+}
+
+validarFormulario("pepe@gmail.com","Elpepe1234","el pepe va a crombie los lunes y miercoles")
+
